@@ -1,0 +1,61 @@
+.hombre-container {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; Asegura que el contenedor ocupe toda la altura de la ventana */
+}
+
+.hombre-image {
+  flex: 0 1 85vh; /* Ocupa aproximadamente el 80% de la altura de la ventana */
+  overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
+}
+
+.hombre-image img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* Asegura que la imagen ocupe todo el alto del contenedor */
+  object-fit: cover; /* Asegura que la imagen mantenga su proporción y cubra el contenedor */
+  object-position: 0px -400px;
+}
+
+.hombre-text {
+  flex: 0 1 10vh; /* Ocupa aproximadamente el 20% restante de la altura de la ventana */
+  background-color: #000; /* Fondo negro */
+  display: flex;
+  align-items: center; /* Centra el texto verticalmente */
+  justify-content: end; /* Centra el texto horizontalmente */
+  padding-right: 5%;
+}
+
+.hombre-text h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: lighter;
+  color: #fff; /* Texto blanco */
+  margin: 0; /* Elimina márgenes predeterminados */
+  font-size: 3rem; /* Tamaño de fuente ajustable */
+}
+@media (max-width: 1440px) {
+  element.style {
+    object-position: 0px 0px;
+  }
+}
+@media (max-width: 1024px) {
+  element.style {
+    object-position: 0px 0px;
+  }
+}
+@media (max-width: 425px) {
+  element.style {
+    object-position: 0px 0px;
+  }
+  .hombre-image {
+      flex: 0 1 40vh;
+    }
+    .hombre-image img{
+      /* object-fit: fill; */
+      object-position: center;
+    }
+    .hombre-text h2{
+      font-size: 2rem;
+    }
+
+  }
+

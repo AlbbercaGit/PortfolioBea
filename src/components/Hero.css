@@ -1,0 +1,133 @@
+/* src/components/Hero.css */
+.hero {
+  display: flex;
+  flex-direction: column; /* Para alinear los textos verticalmente */
+  align-items: flex-start; /* Alinea los textos a la izquierda */
+  justify-content: space-between; /* Espacia los textos verticalmente */
+  height: 99vh; /* Ocupa el 95% de la altura de la ventana */
+  /* width: 100vw; Ocupa toda la anchura de la ventana */
+  background: url("./img/herobea.jpeg") no-repeat center center; /* Fondo con imagen */
+  background-size: cover; /* Asegura que la imagen cubra el área del fondo */
+  /* padding: 20px; Espaciado interno */
+  color: #ffffff; /* Color del texto */
+  position: relative; /* Posición relativa */
+  top: 0; /* Ajusta al borde superior de la ventana */
+  left: 0; /* Ajusta al borde izquierdo de la ventana */
+  z-index: 900; /* Coloca detrás del header */
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  justify-content: space-between; /* Espacia los textos verticalmente */
+  height: 100%; /* Ocupa toda la altura del contenedor */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding: 2%; 
+  /* max-width: 800px; Ancho máximo del contenedor */
+  width: 40%;
+
+}
+
+.hero-title {
+  font-size: 4vw; /* Tamaño del texto principal relativo al ancho de la ventana */
+  margin-bottom: 20px; /* Espaciado debajo del título */
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.hero-subtitle {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 2vw; /* Tamaño del texto secundario relativo al ancho de la ventana */
+  margin: 10px 0; /* Espaciado vertical entre subtítulos */
+}
+
+.hero-subtitle1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 2vw; /* Tamaño del texto secundario relativo al ancho de la ventana */
+  margin-bottom: 10%; /* Espaciado debajo del subtítulo */
+  /* width: 70%; Ancho del subtítulo */
+}
+@media (max-width: 1500px) {
+  .hero-text-container {
+    /* padding: 4%; */
+  }
+  .hero-subtitle1 {
+    width: 80%;
+  }
+  .hero-subtitle {
+    padding-bottom: 63px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .hero-title {
+    font-size: 6vh; /* Ajusta el tamaño del texto principal para pantallas más pequeñas */
+  }
+
+  .hero-subtitle,
+  .hero-subtitle1 {
+    font-size: 3vh; /* Ajusta el tamaño del texto secundario para pantallas más pequeñas */
+  }
+  .hero-subtitle {
+    padding-bottom: 110px;
+  }
+  .hero-subtitle1 {
+    margin: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle {
+    padding-bottom: 100px;
+  }
+  .hero-subtitle1 {
+    width: 60%;
+}
+}
+
+@media (max-width: 425px) {
+  .hero-title {
+    font-size: 5vh; /* Ajusta el tamaño del texto principal para pantallas muy pequeñas */
+  }
+
+  .hero-subtitle,
+  .hero-subtitle1 {
+    font-size: 3vh; /* Ajusta el tamaño del texto secundario para pantallas muy pequeñas */
+  }
+  .hero {
+    background-position: 65%;
+  }
+  .hero-text-container {
+    /* display: none; */
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: space-evenly; /* Espacia los textos verticalmente */
+    align-items: center;
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    text-align: center; /* Alinea el texto a la izquierda */
+    /* padding: 2%; Espaciado interno */
+    /* max-width: 800px; Ancho máximo del contenedor */
+    width: 95%;
+  }
+
+  /* Definir la animación de opacidad */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hero-text-container {
+    opacity: 0; /* Estado inicial de la opacidad */
+  }
+  
+  .hero-text-container.visible {
+    animation: fadeIn 1s ease-in-out forwards; /* Aplicar la animación */
+  }
+
+
+}

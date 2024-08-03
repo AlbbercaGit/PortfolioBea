@@ -1,0 +1,117 @@
+.App-footer {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: lighter;
+    color: black;
+    padding: 40px;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido del footer */
+  }
+  
+  .Footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
+    gap: 20px; /* Espacio entre columnas */
+    max-width: 1200px; /* Ajusta el ancho máximo del footer */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin-bottom: 20px; /* Espacio entre el contenido del footer y el copyright */
+  }
+  
+  .Footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido dentro de cada columna */
+      justify-content: center;
+    align-items: center;
+  }
+  
+  .Footer-logo {
+    width: 80px; /* Tamaño ajustado del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-bottom: 20px;
+  }
+  
+  .Footer-social {
+    display: flex;
+    gap: 10px; /* Espacio entre los íconos sociales */
+  }
+  
+  .Footer-social-icon {
+    width: 24px; /* Tamaño de los íconos sociales ajustado */
+    height: auto;
+  }
+  
+  .Footer-column h2 {
+    font-size: 1.5rem; /* Tamaño de fuente para los encabezados */
+    margin: 0 0 10px 0; /* Márgenes para los encabezados */
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: normal;
+  }
+  
+  .Footer-column p {
+    font-size: 1.2rem; /* Tamaño de fuente para los párrafos */
+    margin: 0; /* Márgenes para los párrafos */
+    text-align: center; /* Alinea el texto al centro de la columna */
+    color: black;
+  }
+  
+  .Footer-copyright {
+    text-align: center; /* Centra el texto del copyright */
+    width: 100%; /* Asegura que el letrero de copyright ocupe todo el ancho del footer */
+    padding: 10px 0; /* Espacio arriba y abajo del letrero de copyright */
+   /* Color de fondo para el letrero de copyright */
+    margin-top: auto; /* Empuja el letrero de copyright al final del footer */
+  }
+  
+  .Footer-copyright p {
+    font-size: 1rem; /* Tamaño de fuente para el texto del copyright */
+    margin: 0; /* Márgenes para el texto del copyright */
+  }
+  
+  
+  /* Estilos específicos para móviles */
+  @media (max-width: 768px) {
+    .Footer-container {
+      grid-template-columns: 1fr; /* Una columna en móvil */
+      gap: 20px; /* Espacio entre elementos ajustado */
+      max-width: 100%; /* Ancho completo en móvil */
+    }
+  
+    .Footer-column {
+      text-align: center; /* Centra el texto de cada columna */
+      margin-bottom: 20px; /* Espacio entre columnas en móvil */
+    }
+  
+    .Footer-logo {
+      width: 60px; /* Tamaño del logo ajustado en móvil */
+    }
+  
+    .Footer-social {
+      justify-content: center; /* Centra los íconos sociales en móvil */
+    }
+  
+    .Footer-social-icon {
+      width: 20px; /* Tamaño de los íconos sociales ajustado en móvil */
+    }
+  
+    .Footer-column h2 {
+      font-size: 1.2rem; /* Tamaño de fuente más pequeño en móvil */
+    }
+  
+    .Footer-column p {
+      font-size: 1rem; /* Tamaño de fuente más pequeño en móvil */
+    }
+  
+    .Footer-copyright {
+      padding: 5px 0; /* Menor espacio arriba y abajo en móvil */
+    }
+  
+    .Footer-copyright p {
+      font-size: 0.9rem; /* Tamaño de fuente más pequeño en móvil */
+    }
+  }
+  @media (max-width: 435px) {
+    .App-footer {
+  padding: 15px;
+}
+}

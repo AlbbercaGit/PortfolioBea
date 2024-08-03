@@ -1,0 +1,139 @@
+.cronicas-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas, la columna derecha es el doble de ancha que la izquierda */
+    height: 70vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+  }
+  
+  .cronicas-left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+    width: 100%;
+    text-align: left;
+  }
+  
+  .cronicas-left-column h1 {
+    width: 60%;
+    font-size: 3.5rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: normal;
+
+    margin-bottom: 20px;
+  }
+  
+  .cronicas-left-column h3 {
+    width: 60%;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: lighter;
+
+    font-size: 1.5rem;
+  }
+  
+  .cronicas-right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cronicas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(2, 1fr); /* Dos filas */
+    gap: 20px;
+    /* height: 100%; Asegura que el grid ocupe toda la altura disponible */
+  }
+  
+  .cronicas-grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que las imágenes no se desborden del contenedor */
+  }
+  .cronicas-grid-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block; /* Añadido para evitar espacios en blanco debajo de la imagen */
+  }
+  @media (max-width: 1440px) {
+  .cronicas-grid-item img {
+    width: 220px;
+    height: 220px;
+  }
+  .cronicas-left-column h3 {
+    width: 70%;
+    font-size: 1.1rem;
+
+  }
+
+  .cronicas-left-column h1 {
+    width: 70%;
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1100px) {
+  .cronicas-grid-item img {
+    width: 220px;
+    height: 220px;
+  }
+  .cronicas-left-column h3 {
+    width: 70%;
+    
+  }
+  .cronicas-left-column h1 {
+    width: 70%;
+    font-size: 2rem;
+  }
+}
+  /* Pantallas de tabletas y dispositivos móviles (hasta 768px de ancho) */
+@media (max-width: 768px) {
+
+  .cronicas-grid-item img {
+    width: 150px;
+    height: 150px;
+  }
+  .cronicas-container{
+    height: 65vh;
+
+  }
+
+  .cronicas-left-column h3 {
+    width: 80%;
+    font-size: 0.9rem;
+}
+.cronicas-left-column h1 {
+  width: 80%;
+  font-size: 2rem;
+}
+.cronicas-left-column  {
+padding: 0px;
+}
+  
+  
+  }
+  
+  /* Pantallas pequeñas (hasta 480px de ancho) */
+  @media (max-width: 480px) {
+    .cronicas-left-column h1 {
+      font-size: 1.2rem; /* Reduce el tamaño de la fuente del título */
+      width: 90%;
+
+    }
+  
+    .cronicas-left-column h3 {
+      font-size: 1rem; /* Reduce el tamaño de la fuente del subtítulo */
+      width: 90%;
+
+    }
+  
+    .cronicas-grid {
+      grid-template-columns: 1fr; /* Una sola columna */
+      grid-template-rows: repeat(4, 1fr); /* Cuatro filas */
+    }
+    .cronicas-container{
+      height: 80vh;
+    }
+  }
+  

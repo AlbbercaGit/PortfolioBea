@@ -1,0 +1,152 @@
+.negro-container {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  height: 100vh;
+}
+
+.negro-left-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  overflow: hidden;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: lighter;
+}
+
+.negro-text-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  width: 55%;
+  padding-right: 20px;
+}
+
+.negro-text-grid h1 {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+
+.negro-text-grid h3 {
+  margin: 10px 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.negro-right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-around;
+  /* padding: 20px; */
+}
+
+.negro-right-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra las imágenes horizontalmente */
+  gap: 20px; /* Ajusta el espacio entre las imágenes aquí */
+}
+
+.negro-right-top-top img,
+.negro-right-top-bottom img {
+  display: block; /* Asegura que las imágenes no se ajusten al contenedor */
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.negro-right-top-top img {
+  /* height: 200px; */
+  width: 550px;
+}
+
+.negro-right-top-bottom img {
+  /* height: 100%; */
+  width: 725px;
+}
+@media (max-width: 1500px) {
+  .negro-right-top-bottom img {
+    width: 600px;
+  }
+  .negro-right-top-top img {
+    width: 500px;
+  }
+}
+@media (max-width: 1100px) {
+  .negro-right-top-bottom img {
+    width: 450px;
+  }
+  .negro-right-top-top img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .negro-text-grid {
+    width: 65%;
+  }
+}
+@media (max-width: 1024px) {
+  .negro-text-grid {
+    width: 80%;
+  }
+  .negro-text-grid h1 {
+    color: white;
+    font-size: 1.8rem;
+  }
+  .negro-text-grid h3 {
+    font-size: 1rem; /* Reduce el tamaño de la fuente del subtítulo */
+  }
+}
+
+/* Pantallas de tabletas y dispositivos móviles (hasta 768px de ancho) */
+@media (max-width: 768px) {
+  .negro-right-top-bottom img {
+    width: 350px;
+    height: 125%;
+  }
+  .negro-right-top-top img {
+    width: 300px;
+    height: 150%;
+  }
+  .negro-text-grid {
+    width: 100%;
+  }
+}
+
+/* Pantallas pequeñas (hasta 480px de ancho) */
+@media (max-width: 480px) {
+  .negro-left-column{
+    padding: 10px
+  }
+  .negro-text-grid {
+    padding-right: inherit;
+    width: 120%;
+  }
+  .negro-text-grid h1 {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente del título */
+  }
+
+  .negro-text-grid h3 {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente del subtítulo */
+  }
+  .negro-right-top-top img {
+    width: 180px;
+    height: 175%;
+  }
+  .negro-right-top-bottom img {
+    width: 210px;
+    height: 200%;
+  }
+  .negro-right-column {
+    justify-content: inherit;
+    padding-top: 50%;
+    gap: 20%;
+  }
+}

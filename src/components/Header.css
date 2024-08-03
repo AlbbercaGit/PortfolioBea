@@ -1,0 +1,156 @@
+p {
+  color: white;
+  margin: 15px;
+}
+
+/* src/components/Header.css */
+header {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.7rem;
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; /* Ajusta al borde superior de la ventana */
+  left: 0; /* Ajusta al borde izquierdo de la ventana */
+  width: 100%; /* Ancho completo de la ventana */
+  height: 5vh; /* Ancho completo de la ventana */
+  background-color: #020202;
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: space-between; /* Espacia el logo y el nav */
+  align-items: center; /* Centra el contenido verticalmente */
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  padding: 10px 20px; /* Espaciado interno para el header */
+}
+
+nav {
+  display: flex; /* Usa flexbox para el diseño */
+  margin-right: 35px;
+}
+
+.nav-links {
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: flex-end; /* Alinea los elementos a la derecha */
+  align-items: center; /* Centra verticalmente los elementos */
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina el margen */
+  padding: 0; /* Elimina el relleno */
+}
+
+.nav-links li {
+  margin: 0 15px; /* Margen entre los elementos del menú */
+}
+
+.nav-links a {
+  text-decoration: none; /* Sin subrayado */
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: lighter;
+
+  color: white; /* Color del texto */
+}
+
+.logo {
+  display: flex; /* Usa flexbox para el diseño */
+  align-items: center; /* Centra verticalmente el logo */
+}
+
+.logo-icon {
+  height: 60px; /* Tamaño del logo */
+}
+
+/* Estilos específicos para pantallas de portátiles */
+@media (max-width: 1440px) {
+  header {
+    height: 6vh; /* Aumenta el alto del header para pantallas más pequeñas */
+    padding: 15px 25px; /* Ajusta el espaciado interno */
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    margin-right: 20px; /* Ajusta el margen derecho del nav para pantallas más pequeñas */
+  }
+
+  .nav-links li {
+    margin: 0 10px; /* Ajusta el margen entre los elementos del menú */
+  }
+
+  .logo-icon {
+    height: 50px; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+  }
+}
+
+/* Estilos para pantallas más pequeñas (como tabletas y móviles) */
+@media (max-width: 1024px) {
+  header {
+    height: 4vh; /* Ajusta la altura del header para pantallas más pequeñas */
+    padding: 10px 15px; /* Ajusta el espaciado interno */
+  }
+
+  .nav-links {
+    margin-right: 10px; /* Ajusta el margen derecho del nav */
+  }
+
+  .nav-links li {
+    margin: 0 8px; /* Ajusta el margen entre los elementos del menú */
+  }
+
+  .logo-icon {
+    height: 40px; /* Ajusta el tamaño del logo */
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    width: 100%;
+  }
+}
+@media (max-width: 770px) {
+  header {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  header {
+    height: 100vh; /* Ajusta la altura del header para pantallas más pequeñas */
+    /* padding: 10px 15px; Ajusta el espaciado interno */
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    /* width: 150%; */
+
+  }
+  .logo {
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+  nav {
+    /* display: flex; Usa flexbox para el diseño */
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .nav-links {
+    display: flex; /* Usa flexbox para el diseño */
+    /* justify-content: flex-end; Alinea los elementos a la derecha */
+    /* align-items: c; Centra verticalmente los elementos */
+    flex-direction: column;
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+  }
+
+  /* src/components/Header.css */
+.logo-icon {
+  height: 60px; /* Tamaño del logo */
+  opacity: 0; /* Comienza con opacidad 0 */
+  animation: fadeIn 2s forwards; /* Animación para aparecer */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Termina con opacidad 1 */
+    transform: translateY(500px); /* Mueve 500px hacia abajo */
+
+  }
+}
+
+}
