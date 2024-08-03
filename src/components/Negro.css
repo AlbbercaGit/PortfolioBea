@@ -150,3 +150,19 @@
     gap: 20%;
   }
 }
+
+@media (max-width: 380px){
+.negro-right-top-bottom img {
+    height: 200%;
+    width: 180px;
+}
+.negro-right-top-top img {
+    height: 175%;
+    width: 140px;
+}
+
+.negro-text-grid h1, .negro-text-grid h3 {
+    font-size: 0.7rem;
+}
+
+}
