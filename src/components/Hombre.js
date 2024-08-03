@@ -1,42 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import './Hombre.css'; // Asegúrate de que este archivo tenga los estilos básicos
-import urbanImage from './img/hombre.jpeg'; // Asegúrate de que la ruta sea correcta
+import React, { useState, useEffect } from "react";
+import "./Hombre.css"; // Asegúrate de que este archivo tenga los estilos básicos
+import urbanImage from "./img/hombre.jpeg"; // Asegúrate de que la ruta sea correcta
 
 function Hombre() {
-  const [objectPosition, setObjectPosition] = useState('0px -400px');
+  const [objectPosition, setObjectPosition] = useState("0px -400px");
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
+      const heigh = window.innerHeight;
 
-      if (width < 376){
-        setObjectPosition('-275px 0px'); // o '0px 0px' según el requisito
+      if (width < 376 && heigh > 1000) {
+        setObjectPosition("-675px 0px"); // o '0px 0px' según el requisito
+        return;
+      }       if (width < 376 && heigh > 900){
+        setObjectPosition('-575px 0px'); // o '0px 0px' según el requisito
+        return;
+      }      if (width < 376 && heigh > 800){
+        setObjectPosition('-475px 0px'); // o '0px 0px' según el requisito
+        return;
+      }else if (width < 376 && heigh > 700){
+        setObjectPosition('-375px 0px'); // o '0px 0px' según el requisito
+        return;
+      }
+      else if (width < 376) {
+        setObjectPosition("-275px 0px"); // o '0px 0px' según el requisito
+        return;
+      } else if (width < 400) {
+        setObjectPosition("-400px 0px"); // o '0px 0px' según el requisito
         return;
       }
 
-      if (width < 400){
-        setObjectPosition('-400px 0px'); // o '0px 0px' según el requisito
+      if (width < 450) {
+        setObjectPosition("-430px 0px"); // o '0px 0px' según el requisito
         return;
       }
 
-      if (width < 450){
-        setObjectPosition('-430px 0px'); // o '0px 0px' según el requisito
-        return;
-      }
-      
       if (width < 500) {
         // Si el ancho es menor a 500px, no actualices la posición
-        setObjectPosition('-530px 0px'); // o '0px 0px' según el requisito
+        setObjectPosition("-530px 0px"); // o '0px 0px' según el requisito
         return;
       }
       if (width < 650) {
         // Si el ancho es menor a 500px, no actualices la posición
-        setObjectPosition('-330px 0px'); // o '0px 0px' según el requisito
+        setObjectPosition("-330px 0px"); // o '0px 0px' según el requisito
         return;
       }
       if (width < 768) {
         // Si el ancho es menor a 500px, no actualices la posición
-        setObjectPosition('-170px 0px'); // o '0px 0px' según el requisito
+        setObjectPosition("-170px 0px"); // o '0px 0px' según el requisito
         return;
       }
 
@@ -58,17 +70,17 @@ function Hombre() {
         positionY = Math.max(positionY, -400); // Asegura que positionY no sea menor que -400
       }
 
-      if (width > 900) {   
-      setObjectPosition(`0px ${positionY}px`);
-      }else{
+      if (width > 900) {
+        setObjectPosition(`0px ${positionY}px`);
+      } else {
         setObjectPosition(`-50px ${positionY}px`);
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize(); // Inicializa el valor de objectPosition
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
