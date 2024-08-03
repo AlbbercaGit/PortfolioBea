@@ -9,7 +9,7 @@ import img4 from './img/ruido4.jpeg';
 
 function Cronicas() {
   return (
-    <div className="cronicas-container">
+    <div className="cronicas-container"  id="cronicas-container">
 
       <div className="cronicas-right-column">
         <div className="cronicas-grid">

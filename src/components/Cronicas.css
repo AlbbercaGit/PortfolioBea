@@ -16,7 +16,7 @@
 
 .cronicas-left-column h1 {
   width: 60%;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: "Nunito Sans", sans-serif;
   font-weight: normal;
 
@@ -127,6 +127,10 @@
   .cronicas-container {
     height: 80vh;
   }
+  .cronicas-grid-item img {
+    width: 145px;
+    height: 145px;
+}
 }
 @media (max-width: 380px) {
   .cronicas-container {

@@ -11,7 +11,7 @@ import photo6 from './img/semaforo.jpeg';
 
 function Blanco() {
   return (
-    <div className="container">
+    <div className="container"  id="blanco-container">
       <div className="left-column">
         <div className="left-top">
           <img src={photo1} alt="Photo 1" className="left-top-img small-square" />

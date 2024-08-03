@@ -8,9 +8,40 @@ function Hombre() {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
+
+      if (width < 376){
+        setObjectPosition('-275px 0px'); // o '0px 0px' según el requisito
+        return;
+      }
+
+      if (width < 400){
+        setObjectPosition('-400px 0px'); // o '0px 0px' según el requisito
+        return;
+      }
+
+      if (width < 450){
+        setObjectPosition('-430px 0px'); // o '0px 0px' según el requisito
+        return;
+      }
+      
+      if (width < 500) {
+        // Si el ancho es menor a 500px, no actualices la posición
+        setObjectPosition('-530px 0px'); // o '0px 0px' según el requisito
+        return;
+      }
+      if (width < 650) {
+        // Si el ancho es menor a 500px, no actualices la posición
+        setObjectPosition('-330px 0px'); // o '0px 0px' según el requisito
+        return;
+      }
+      if (width < 768) {
+        // Si el ancho es menor a 500px, no actualices la posición
+        setObjectPosition('-170px 0px'); // o '0px 0px' según el requisito
+        return;
+      }
+
       let positionY = -400; // Valor base
 
-      // Calcula el cambio en positionY basado en el tamaño de la ventana
       if (width > 1500) {
         // Ajusta la posición en función de un decremento de 25px por cada 100px de ancho
         const decreaseStep = 25; // El incremento de cada paso
@@ -27,10 +58,11 @@ function Hombre() {
         positionY = Math.max(positionY, -400); // Asegura que positionY no sea menor que -400
       }
 
-
-
-
+      if (width > 900) {   
       setObjectPosition(`0px ${positionY}px`);
+      }else{
+        setObjectPosition(`-50px ${positionY}px`);
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -40,7 +72,7 @@ function Hombre() {
   }, []);
 
   return (
-    <div className="hombre-container">
+    <div className="hombre-container" id="hombre-container">
       <div className="hombre-image">
         <img src={urbanImage} alt="Urban Life" style={{ objectPosition }} />
       </div>

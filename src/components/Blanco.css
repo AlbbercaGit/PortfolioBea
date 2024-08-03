@@ -10,7 +10,7 @@ html {
 .container {
   display: grid;
   grid-template-columns: 55% 45%; /* Columna izquierda de 60% y columna derecha de 40% */
-  height: 100vh;
+  height: 93vh;
 }
 
 .left-column,
@@ -19,7 +19,7 @@ html {
 }
 
 .left-column {
-  grid-template-rows: 30vh 70vh; /* Filas con alturas específicas */
+  grid-template-rows: 27vh 66vh; /* Filas con alturas específicas */
 }
 
 .right-column {
@@ -52,7 +52,7 @@ html {
   z-index: 1; /* Asegura que esté debajo de right-top */
   position: absolute; /* Absoluta para que se superponga */
 
-  height: 100vh;
+  height: 93vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
@@ -169,16 +169,16 @@ h2 {
   font-weight: lighter;
   text-align: left;
   width: 45%;
-  padding: 25px;
+  padding-right: 25px;
 }
 .right-bottom h3 {
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 5vh;
   font-weight: lighter;
   text-align: left;
   width: 60%;
-  padding: 25px;
+  padding-right: 25px;
 }
 
 /* Media query para dispositivos móviles */
@@ -189,18 +189,33 @@ h2 {
     height: 300px;
   }
   .small-square2 {
-    width: 250;
+    width: 250px;
     height: 140px;
+  }
+  .rectangle{
+    width: 300px;
+    height: 140px;
+  }
+  .small-square {
+    width: 220px;
+    height: 140px;
+  }
+  .right-top-left {
+    margin: 0px;
+    gap: 15px;
+  }
+  .right-bottom h3{
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 1100px) {
   .small-square2 {
-    width: 250;
+    width: 220px;
     height: 140px;
   }
   .vertical-rectangle {
     width: 100px;
-    height: 300px;
+    height: 290px;
   }
   .left-bottom {
     width: 100%;
@@ -247,13 +262,25 @@ h2 {
     width: initial;
   }
 }
+@media (max-width: 500px) {
+
+.small-square2 {
+  width: 145px;
+  height: 140px;
+}
+.small-square:nth-of-type(1) {
+  display: none;
+}
+.small-square {
+  width: 180px;
+  height: 150px;
+}
+}
 @media (max-width: 425px) {
-  .small-square:nth-of-type(1) {
-    display: none;
-  }
+
   .small-square {
-    width: 175px;
-    height: 175px;
+    width: 150px;
+    height: 130px;
 }
   .small-square2 {
     width: 150px;
@@ -276,6 +303,15 @@ h2 {
   .right-top{
          margin-left: 0%
   }
+  .container{
+  height: 100vh;
+  }
+  .left-column {
+    grid-template-rows: 30vh 70vh;
+}
+.right-bottom {
+  height: 100vh;
+}
 }
 @media (max-width: 375px){
 .small-square2 {

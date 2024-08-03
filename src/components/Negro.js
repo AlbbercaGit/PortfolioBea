@@ -7,7 +7,7 @@ import imgRightBottom from './img/puertas.jpeg';
 
 function NegroLayout() {
   return (
-    <div className="negro-container">
+    <div className="negro-container"  id="negro-container">
       <div className="negro-left-column">
         <div className="negro-text-grid">
           <h1>Elegancia en blanco y negro: retratos atemporales que trascienden lo ordinario</h1>

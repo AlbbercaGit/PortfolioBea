@@ -5,7 +5,7 @@
 }
 
 .hombre-image {
-  flex: 0 1 85vh; /* Ocupa aproximadamente el 80% de la altura de la ventana */
+  flex: 0 1 84vh; /* Ocupa aproximadamente el 80% de la altura de la ventana */
   overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
 }
 
@@ -44,10 +44,12 @@
 }
 @media (max-width: 425px) {
   element.style {
-    object-position: 0px 0px;
-  }
+    object-position: -410px 0px;
+    }
   .hombre-image {
-      flex: 0 1 40vh;
+      flex: 0 1 90vh;
+      object-position: -300px;
+
     }
     .hombre-image img{
       /* object-fit: fill; */

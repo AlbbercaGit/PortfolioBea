@@ -1,7 +1,7 @@
 .negro-container {
   display: grid;
   grid-template-columns: 45% 55%;
-  height: 100vh;
+  height: 93vh;
 }
 
 .negro-left-column {
@@ -28,14 +28,14 @@
 
 .negro-text-grid h1 {
   color: white;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: lighter;
 }
 
 .negro-text-grid h3 {
   margin: 10px 0;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: lighter;
 }
 
@@ -91,6 +91,13 @@
   .negro-text-grid {
     width: 65%;
   }
+  .negro-text-grid h1 {
+    font-size: 1.3rem; /* Reduce el tamaño de la fuente del título */
+  }
+
+  .negro-text-grid h3 {
+    font-size: 1.1rem; /* Reduce el tamaño de la fuente del subtítulo */
+  }
 }
 @media (max-width: 1024px) {
   .negro-text-grid {
@@ -98,8 +105,8 @@
   }
   .negro-text-grid h1 {
     color: white;
-    font-size: 1.8rem;
-  }
+    font-size: 1.5rem; 
+    }
   .negro-text-grid h3 {
     font-size: 1rem; /* Reduce el tamaño de la fuente del subtítulo */
   }
@@ -118,6 +125,10 @@
   .negro-text-grid {
     width: 100%;
   }
+  .negro-text-grid h1 {
+    color: white;
+    font-size: 1.3rem; 
+    }
 }
 
 /* Pantallas pequeñas (hasta 480px de ancho) */
@@ -148,6 +159,9 @@
     justify-content: inherit;
     padding-top: 50%;
     gap: 20%;
+  }
+  .negro-container {
+    height: 100vh;
   }
 }
 

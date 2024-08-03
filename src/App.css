@@ -17,10 +17,5 @@ body {
       height: auto; 
     }
   }
-  /* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-  #negro, #hombre, #cronicas, #footer {
-    display: none;
-  }
-}
+
   

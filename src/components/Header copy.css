@@ -7,16 +7,16 @@ p {
 header {
   font-family: "Nunito Sans", sans-serif;
   font-size: 1.7rem;
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 5vh;
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; /* Ajusta al borde superior de la ventana */
+  left: 0; /* Ajusta al borde izquierdo de la ventana */
+  width: 100%; /* Ancho completo de la ventana */
+  height: 5vh; /* Ancho completo de la ventana */
   background-color: #020202;
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  z-index: 1000; 
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: space-between; /* Espacia el logo y el nav */
+  align-items: center; /* Centra el contenido verticalmente */
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
   padding: 10px 20px; /* Espaciado interno para el header */
 }
 
@@ -26,10 +26,10 @@ nav {
 }
 
 .nav-links {
-  display: flex;
-  justify-content: flex-end; 
-  align-items: center;
-  list-style: none; 
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: flex-end; /* Alinea los elementos a la derecha */
+  align-items: center; /* Centra verticalmente los elementos */
+  list-style: none; /* Elimina los puntos de la lista */
   margin: 0; /* Elimina el margen */
   padding: 0; /* Elimina el relleno */
 }
@@ -105,60 +105,52 @@ nav {
     font-size: 1rem;
   }
 }
+@media (max-width: 425px) {
+  header {
+    height: 100vh; /* Ajusta la altura del header para pantallas más pequeñas */
+    /* padding: 10px 15px; Ajusta el espaciado interno */
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    /* width: 150%; */
 
-@media (max-width: 450px) {
+  }
+  .logo {
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+  nav {
+    /* display: flex; Usa flexbox para el diseño */
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .nav-links {
+    display: flex; /* Usa flexbox para el diseño */
+    /* justify-content: flex-end; Alinea los elementos a la derecha */
+    /* align-items: c; Centra verticalmente los elementos */
+    flex-direction: column;
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+  }
 
-
-
-.App-header {
-  position: inherit; 
-
-  height: 100vh;
-  display: flex;
-  display: none;
-  align-items: center; 
-  justify-content: center; 
-  flex-direction: column;
-  opacity: 1; /* Inicialmente completamente visible */
-  overflow: hidden; /* Oculta el contenido que se desborda durante la animación */
-  /* animation: fadeOutHeight 8s forwards;  */
-  padding: 0px;
-}
-.logo{
-  flex-direction: column;
-
-}
+  /* src/components/Header.css */
 .logo-icon {
-  height: 200px;
- width: 100%;
- max-width: inherit;
-}
-nav{
-  display: none;
-}
-.logo{
-
+  height: 60px; /* Tamaño del logo */
+  opacity: 0; /* Comienza con opacidad 0 */
+  animation: fadeIn 2s forwards; /* Animación para aparecer */
 }
 
-@keyframes fadeOutHeight {
-  0% {
-    height: 100vh; /* Comienza con altura completa */
-    opacity: 1; /* Comienza completamente visible */
-  }
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Termina con opacidad 1 */
+    transform: translateY(500px); /* Mueve 500px hacia abajo */
 
-  100% {
-    height: 0vh; /* Reduce la altura a 0 */
-    /* opacity: 0;  */
   }
 }
-
-.hidden {
-  display: none; /* Oculta el elemento completamente después de la animación */
-}
-
-.logo {
-  text-align: center;
-}
-
 
 }

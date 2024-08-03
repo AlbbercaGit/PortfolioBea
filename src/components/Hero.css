@@ -4,7 +4,7 @@
   flex-direction: column; /* Para alinear los textos verticalmente */
   align-items: flex-start; /* Alinea los textos a la izquierda */
   justify-content: space-between; /* Espacia los textos verticalmente */
-  height: 99vh; /* Ocupa el 95% de la altura de la ventana */
+  height: 100vh; /* Ocupa el 95% de la altura de la ventana */
   /* width: 100vw; Ocupa toda la anchura de la ventana */
   background: url("./img/herobea.jpeg") no-repeat center center; /* Fondo con imagen */
   background-size: cover; /* Asegura que la imagen cubra el área del fondo */
@@ -37,7 +37,8 @@
 
 .hero-subtitle {
   font-family: "Nunito Sans", sans-serif;
-  font-weight: lighter;
+  /* font-weight: lighter; */
+  font-weight: 200;
   font-size: 2vw; /* Tamaño del texto secundario relativo al ancho de la ventana */
   margin: 10px 0; /* Espaciado vertical entre subtítulos */
 }
@@ -50,9 +51,7 @@
   /* width: 70%; Ancho del subtítulo */
 }
 @media (max-width: 1500px) {
-  .hero-text-container {
-    /* padding: 4%; */
-  }
+
   .hero-subtitle1 {
     width: 80%;
   }
@@ -121,12 +120,78 @@
     }
   }
   
-  .hero-text-container {
-    opacity: 0; /* Estado inicial de la opacidad */
+  @keyframes fadeIn2 {
+    0% {
+      opacity: 0;
+    }
+    50%{opacity: 0;}
+    100% {
+      opacity: 1;
+      /* background-color: red; */
+    }
   }
   
-  .hero-text-container.visible {
+  .hero-text-container {
+    opacity: 0,2; /* Estado inicial de la opacidad */
+    align-items: inherit;
+    text-align: inherit;
+  }
+
+  
+  
+  .hero-text-container.visible h1{
     animation: fadeIn 1s ease-in-out forwards; /* Aplicar la animación */
+  
+  }
+
+  .hero-text-container.visible h3 {
+    animation: fadeIn2 2.5s ease-in-out forwards; /* Aplicar la animación */
+    width: 100%;
+    text-align: center;
+  }
+  .hero-text-container h3:nth-last-child(2){
+    animation: fadeIn2 5s ease-in-out forwards;
+    text-align: right;
+  }
+
+  @keyframes blink {
+    50% {
+    opacity: 0;
+    }
+    100%{
+      opacity: 0,5;
+    }
+  }
+
+  .arrow-container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: end;
+    animation:  fadeIn2 6.5s ease-in-out forwards, blink 2.5s ease-in-out infinite;
+    /* fadeIn2 5s ease-in-out forwards, */
+
+}
+  /* Pseudo-elemento para la flecha */
+  .arrow-container::after {
+    content: ''; 
+    display: flex;
+    margin: 35px;
+    justify-content: center;
+    align-items: center;
+    border-width: 0 15px 15px 15px; 
+    rotate: calc(180deg);
+    border-style: solid; 
+    border-color: transparent transparent white transparent;
+  }
+  .no-blink {
+    animation: blink 6.5s ease-in-out forwards; /* Solo la animación fadeIn2 */
+    opacity: 0;
+    display: none;
   }
 
 
