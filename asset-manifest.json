@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PortfolioBea/static/css/main.a83023d8.css",
+    "main.css": "/PortfolioBea/static/css/main.2af982f6.css",
     "main.js": "/PortfolioBea/static/js/main.802b6a65.js",
     "static/js/453.b9bb14af.chunk.js": "/PortfolioBea/static/js/453.b9bb14af.chunk.js",
     "static/media/ruido3.jpeg": "/PortfolioBea/static/media/ruido3.c32485fad7fa4cf7e2d1.jpeg",
@@ -18,12 +18,12 @@
     "static/media/logow.png": "/PortfolioBea/static/media/logow.4b6d840fe56c79f7b280.png",
     "static/media/logo.png": "/PortfolioBea/static/media/logo.1703ba844d76f39b203f.png",
     "index.html": "/PortfolioBea/index.html",
-    "main.a83023d8.css.map": "/PortfolioBea/static/css/main.a83023d8.css.map",
+    "main.2af982f6.css.map": "/PortfolioBea/static/css/main.2af982f6.css.map",
     "main.802b6a65.js.map": "/PortfolioBea/static/js/main.802b6a65.js.map",
     "453.b9bb14af.chunk.js.map": "/PortfolioBea/static/js/453.b9bb14af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a83023d8.css",
+    "static/css/main.2af982f6.css",
     "static/js/main.802b6a65.js"
   ]
 }
