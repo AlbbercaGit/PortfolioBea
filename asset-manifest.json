@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/PortfolioBea/static/css/main.aa96d74b.css",
-    "main.js": "/PortfolioBea/static/js/main.c536a344.js",
+    "main.css": "/PortfolioBea/static/css/main.65645411.css",
+    "main.js": "/PortfolioBea/static/js/main.12eeaa42.js",
     "static/js/453.b9bb14af.chunk.js": "/PortfolioBea/static/js/453.b9bb14af.chunk.js",
     "static/media/ruido3.jpeg": "/PortfolioBea/static/media/ruido3.c32485fad7fa4cf7e2d1.jpeg",
     "static/media/hombre.jpeg": "/PortfolioBea/static/media/hombre.c4d257feea75589493d2.jpeg",
     "static/media/ruido4.jpeg": "/PortfolioBea/static/media/ruido4.1c99c4a6a2c56e5136bb.jpeg",
-    "static/media/obra.jpeg": "/PortfolioBea/static/media/obra.83569d54b91c86ae5cd4.jpeg",
     "static/media/parque.jpeg": "/PortfolioBea/static/media/parque.8bda2c52a7dc1af7dd5e.jpeg",
     "static/media/semaforo.jpeg": "/PortfolioBea/static/media/semaforo.c2f0e03c634fa12aa873.jpeg",
     "static/media/electricas.jpeg": "/PortfolioBea/static/media/electricas.cf48e8b89a2be8a7889e.jpeg",
@@ -19,12 +18,12 @@
     "static/media/logow.png": "/PortfolioBea/static/media/logow.4b6d840fe56c79f7b280.png",
     "static/media/logo.png": "/PortfolioBea/static/media/logo.1703ba844d76f39b203f.png",
     "index.html": "/PortfolioBea/index.html",
-    "main.aa96d74b.css.map": "/PortfolioBea/static/css/main.aa96d74b.css.map",
-    "main.c536a344.js.map": "/PortfolioBea/static/js/main.c536a344.js.map",
+    "main.65645411.css.map": "/PortfolioBea/static/css/main.65645411.css.map",
+    "main.12eeaa42.js.map": "/PortfolioBea/static/js/main.12eeaa42.js.map",
     "453.b9bb14af.chunk.js.map": "/PortfolioBea/static/js/453.b9bb14af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa96d74b.css",
-    "static/js/main.c536a344.js"
+    "static/css/main.65645411.css",
+    "static/js/main.12eeaa42.js"
   ]
 }
